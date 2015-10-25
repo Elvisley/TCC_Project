@@ -76,7 +76,7 @@ namespace ConsoleApplication8.Domain
 
         public string banco { get; set; }
 
-        public int agendia{ get; set; }
+        public int agencia{ get; set; }
 
         public int conta { get; set; }
 
