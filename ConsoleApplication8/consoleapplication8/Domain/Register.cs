@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace ConsoleApplication8.Domain
 {
@@ -16,7 +17,7 @@ namespace ConsoleApplication8.Domain
 
         public string ccredor { get; set; }
 
-        public int ccpfcnpj { get; set; }
+        public long ccpfcnpj { get; set; }
 
         public string cendereco { get; set; }
 
@@ -32,9 +33,9 @@ namespace ConsoleApplication8.Domain
 
         public int codigocredor { get; set; }
 
-        public int contrato { get; set; }
+        public Int64 contrato { get; set; }
 
-        public int codigotitulo { get; set; }
+        public Int64 codigotitulo { get; set; }
 
         public DateTime vencimentoprorrogavel { get; set; }
 
@@ -46,9 +47,9 @@ namespace ConsoleApplication8.Domain
 
         public decimal valortitulo { get; set; }
 
-        public int nossonumero { get; set; }
+        public Int64 nossonumero { get; set; }
 
-        public int numdocumento { get; set; }
+        public Int64 numdocumento { get; set; }
 
         public string especiedoc { get; set; }
 
@@ -56,7 +57,7 @@ namespace ConsoleApplication8.Domain
 
         public string carteira { get; set; }
 
-        public int cpfcnpj { get; set; }
+        public Int64 cpfcnpj { get; set; }
 
         public string nomesacado { get; set; }
 
@@ -98,9 +99,9 @@ namespace ConsoleApplication8.Domain
 
         public string linhadigitavel { get; set; }
 
-        public int codigobarras { get; set; }
+        public string codigobarras { get; set; }
 
-        public int codigoretorno { get; set; }
+        public Int64 codigoretorno { get; set; }
 
         public decimal valoratual { get; set; }
 
@@ -110,7 +111,7 @@ namespace ConsoleApplication8.Domain
 
         public string prorrogavel { get; set; }
 
-        public int codecentralizador { get; set; }
+        public string codecentralizador { get; set; }
 
         public int numerocentralizador { get; set; }
 
@@ -122,15 +123,44 @@ namespace ConsoleApplication8.Domain
 
         public string kbsfaccontrato { get; set; }
 
-        public int kbsfaccif { get; set; }
+        public string kbsfaccif { get; set; }
 
         public string mensagem6 { get; set; }
 
-        public int idcarta { get; set; }
-        
-        public void parametrosIguais(string texto1 ,string texto2)
+        public string idcarta { get; set; }
+
+        public void parametrosIguais(string texto1, string texto2)
         {
             AssertionConcern.AssertArgumentNotEquals(texto1, texto2, "Mensagens nao devem ser iguais");
+        }
+
+
+        // 20131220 formatarString
+        public DateTime formatarData(string data)
+        {
+            int ano = Int32.Parse(data.Substring(0, 4));
+            int mes = Int32.Parse(data.Substring(4, 2));
+            int dia = Int32.Parse(data.Substring(6, 2));
+            return new DateTime(ano, mes, dia);
+
+        }
+
+        // 12/12/2012
+        public DateTime formatarDataPipi(string data)
+        {
+            string[] dat = data.Split('/');
+            return new DateTime(Int32.Parse(dat[2]), Int32.Parse(dat[1]), Int32.Parse(dat[0]));
+            // string[] data = data.split("/"); 
+        }
+
+        public decimal formatarValor(string valor)
+        {
+            return Decimal.Parse( valor.Replace(',' , '.') );
+        }
+
+        public string retirarCaracteresEspeciais(string text)
+        {
+             return Regex.Replace(text, "[^0-9a-zA-Z]+", "");
         }
 
     }

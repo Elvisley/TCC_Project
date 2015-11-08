@@ -28,7 +28,7 @@ namespace ConsoleApplication8
 
     }
 
-    public class MyDataContextInitializer : DropCreateDatabaseAlways<MyDataContext>
+    public class MyDataContextInitializer : DropCreateDatabaseIfModelChanges<MyDataContext>
     {
         protected override void Seed(MyDataContext context)
         { 
