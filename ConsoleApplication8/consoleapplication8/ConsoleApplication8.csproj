@@ -57,7 +57,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application\RegisterService.cs" />
+    <Compile Include="Application\RegisterServiceAdo.cs" />
+    <Compile Include="Application\RegisterServiceEntity.cs" />
     <Compile Include="Domain\Register.cs" />
     <Compile Include="infra\DataContexts\MySqlConfiguration.cs" />
     <Compile Include="infra\DataContexts\MySqlHistoryContext.cs" />
@@ -73,7 +74,8 @@
     <Compile Include="infra_ado\DBConexao.cs" />
     <Compile Include="infra_ado\RegisterRepositoryAdo.cs" />
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="presentation\Play.cs" />
+    <Compile Include="presentation\PlayAdo.cs" />
+    <Compile Include="presentation\PlayEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resource\AssertionConcern.cs" />
   </ItemGroup>
