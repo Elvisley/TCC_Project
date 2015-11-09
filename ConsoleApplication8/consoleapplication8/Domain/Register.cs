@@ -1,9 +1,11 @@
 ﻿using ConsoleApplication8.Resource;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 
 namespace ConsoleApplication8.Domain
 {
@@ -133,14 +135,14 @@ namespace ConsoleApplication8.Domain
         {
             AssertionConcern.AssertArgumentNotEquals(texto1, texto2, "Mensagens nao devem ser iguais");
         }
-
-
+        
         // 20131220 formatarString
         public DateTime formatarData(string data)
         {
             int ano = Int32.Parse(data.Substring(0, 4));
             int mes = Int32.Parse(data.Substring(4, 2));
             int dia = Int32.Parse(data.Substring(6, 2));
+            
             return new DateTime(ano, mes, dia);
 
         }
