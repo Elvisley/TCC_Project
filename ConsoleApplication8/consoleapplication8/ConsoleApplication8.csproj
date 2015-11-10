@@ -74,6 +74,7 @@
     <Compile Include="infra_ado\DBConexao.cs" />
     <Compile Include="infra_ado\RegisterRepositoryAdo.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="presentation\Play.cs" />
     <Compile Include="presentation\PlayAdo.cs" />
     <Compile Include="presentation\PlayEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

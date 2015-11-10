@@ -11,8 +11,10 @@ namespace ConsoleApplication8.presentation
     class PlayAdo
     {
 
-        public void main()
+
+        public PlayAdo()
         {
+            
             RegisterServiceAdo _registerService = new RegisterServiceAdo();
 
             /*
@@ -22,11 +24,12 @@ namespace ConsoleApplication8.presentation
             4.	Tempo que cada uma das ferramentas gasta pra trazer os dados do arquivo importado
             5.	Tempo que cada ferramenta gasta para retornar todos os registros salvos no banco
             6.	Quanto cada ferramenta utiliza de Memória RAM e Processador da maquina
-
-
-
-
+            
             */
+
+            System.Console.WriteLine("ADO PURO");
+
+            System.Console.WriteLine("Iniciando a importacao da planilha");
 
 
             int counter = 0;
@@ -37,7 +40,7 @@ namespace ConsoleApplication8.presentation
             sw.Start();
             
 
-            /* // Read the file and display it line by line.
+             // Read the file and display it line by line.
              System.IO.StreamReader file = new System.IO.StreamReader(@"C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\consoleapplication8\archive\modelo.txt");
              while ((line = file.ReadLine()) != null)
              {
@@ -109,22 +112,37 @@ namespace ConsoleApplication8.presentation
                      reg.idcarta = dados[58];
 
                      _registerService.createRegisterAdo(reg);
-
-                    // Console.ReadKey();
-
+                    
                  }
 
                  counter++;
-             }*/
+             }
 
             sw.Stop();
 
+            System.Console.WriteLine("importacao realizada com sucesso");
+
             TimeSpan tempo = sw.Elapsed;
 
-            System.Console.WriteLine("Time {0}.", tempo.ToString());
+            System.Console.WriteLine("Foram importadas {0} linhas.", counter);
 
-            //file.Close();
-            System.Console.WriteLine("There were {0} lines.", counter);
+            System.Console.WriteLine("Tempo gasto para importacao  {0}.", tempo.ToString());
+
+            file.Close();
+
+            System.Console.WriteLine("Buscando todos os dados");
+
+            sw.Start();
+
+            //Enumerable<Register> registros = _registerService.list();
+
+            sw.Stop();
+            TimeSpan tempoconsulta = sw.Elapsed;
+
+          //  Console.WriteLine("Retornou {0} registros", registros.Count());
+
+            System.Console.WriteLine("Tempo gasto para buscar  {0}.", tempoconsulta.ToString());
+
             // Suspend the screen.
             System.Console.ReadLine();
 

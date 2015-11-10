@@ -1,0 +1,11 @@
+C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\ConsoleApplication8\bin\Release\ConsoleApplication8.exe.config
+C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\ConsoleApplication8\bin\Release\ConsoleApplication8.exe
+C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\ConsoleApplication8\bin\Release\ConsoleApplication8.pdb
+C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\ConsoleApplication8\bin\Release\EntityFramework.dll
+C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\ConsoleApplication8\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\ConsoleApplication8\bin\Release\MySql.Data.dll
+C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\ConsoleApplication8\bin\Release\MySql.Data.Entity.EF6.dll
+C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\ConsoleApplication8\bin\Release\EntityFramework.xml
+C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\ConsoleApplication8\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\ConsoleApplication8\obj\Release\ConsoleApplication8.exe
+C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\ConsoleApplication8\obj\Release\ConsoleApplication8.pdb
