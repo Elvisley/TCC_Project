@@ -1,4 +1,5 @@
 ﻿using ConsoleApplication8.Domain;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -103,6 +104,89 @@ namespace ConsoleApplication8.infra_ado
            
         }
 
+
+        public IEnumerable<Register> buscar()
+        {
+
+            string query = " SELECT * FROM registers ";
+
+            using (MySqlDataReader reader = _conexao.Select(query))
+            {
+
+                while (reader.Read())
+                {
+                    
+                    Console.WriteLine("{0}", reader["ccontrato"]);
+
+                    /*reader["vencimento"];
+                    reader["ccontrato"];
+                    reader["ccredor"];
+                    reader["ccpfcnpj"];
+                    reader["cendereco"];
+                    reader["cbairro"];
+                    reader["ccidade"];
+                    reader["cestado"];
+                    reader["ccep"];
+                    reader["cinscricaoestadual"];
+                    reader["codigocredor"];
+                    reader["contrato"];
+                    reader["codigotitulo"];
+                    reader["vencimentoprorrogavel"];
+                    reader["dataemissao"];
+                    reader["parcela"];
+                    reader["plano"];
+                    reader["valortitulo"];
+                    reader["nossonumero"];
+                    reader["numdocumento"];
+                    reader["especiedoc"];
+                    reader["especmoeda"];
+                    reader["carteira"];
+                    reader["cpfcnpj"];
+                    reader["nomesacado"];
+                    reader["endereco"];
+                    reader["enderecocomplemento"];
+                    reader["bairro"];
+                    reader["cep"];
+                    reader["cidade"];
+                    reader["uf"];
+                    reader["cedente"];
+                    reader["banco"];
+                    reader["agencia"];
+                    reader["conta"];
+                    reader["nomecredor"];
+                    reader["nomecedente"];
+                    reader["localpagamento"];
+                    reader["mensagem1"];
+                    reader["mensagem2"];
+                    reader["mensagem3"];
+                    reader["mensagem4"];
+                    reader["mensagem5"];
+                    reader["linhadigitavel"];
+                    reader["codigobarras"];
+                    reader["codigoretorno"];
+                    reader["valoratual"];
+                    reader["desconto"];
+                    reader["codigopessoa"];
+                    reader["prorrogavel"];
+                    reader["codecentralizador"];
+                    reader["numerocentralizador"];
+                    reader["ctcamarrado"];
+                    reader["ctcfaixacep"];
+                    reader["facdatapostagem"];
+                    reader["kbsfaccontrato"];
+                    reader["kbsfaccif"];
+                    reader["mensagem6"];
+                    reader["idcarta"];*/
+                }
+
+
+                reader.Close();
+
+                return null;
+            }
+
+              
+        }
         
 
     }

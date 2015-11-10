@@ -32,5 +32,17 @@ namespace ConsoleApplication8.Application
                 throw new Exception("Erro ao salvar ADO : " + e.Message.ToString());
             }
         }
+
+        public IEnumerable<Register> list()
+        {
+            try
+            {
+                return _registerRepAdo.buscar();
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Erro ao salvar ADO : " + e.Message.ToString());
+            }
+        }
     }
 }

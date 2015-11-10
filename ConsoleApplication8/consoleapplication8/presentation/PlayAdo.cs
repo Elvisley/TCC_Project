@@ -134,12 +134,12 @@ namespace ConsoleApplication8.presentation
 
             sw.Start();
 
-            //Enumerable<Register> registros = _registerService.list();
+            IEnumerable<Register> registros = _registerService.list();
 
             sw.Stop();
             TimeSpan tempoconsulta = sw.Elapsed;
 
-          //  Console.WriteLine("Retornou {0} registros", registros.Count());
+            Console.WriteLine("Retornou {0} registros", registros.Count());
 
             System.Console.WriteLine("Tempo gasto para buscar  {0}.", tempoconsulta.ToString());
 

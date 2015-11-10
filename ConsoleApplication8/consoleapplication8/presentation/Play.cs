@@ -9,9 +9,9 @@ namespace ConsoleApplication8.presentation
     {
         static void Main(string[] args)
         {
-          //  PlayAdo pla = new PlayAdo();
+           PlayAdo pla = new PlayAdo();
 
-            PlayEntity pla = new PlayEntity();
+           // PlayEntity pla = new PlayEntity();
         }
     }
 }

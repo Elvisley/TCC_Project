@@ -135,22 +135,19 @@ namespace ConsoleApplication8.infra_ado
             if (this.OpenConnection() == true)
             {
                 //Create Command
-                MySqlCommand cmd = new MySqlCommand(querySelect, connection);
-                //Create a data reader and Execute the command
-                MySqlDataReader dataReader = cmd.ExecuteReader();
-                
-                //close Data Reader
-                dataReader.Close();
+                using (MySqlCommand cmd = new MySqlCommand(querySelect, connection))
+                {
+                    //Create a data reader and Execute the command
+                    MySqlDataReader dataReader = cmd.ExecuteReader();
 
-                //close Connection
-                this.CloseConnection();
-
-                //return list to be displayed
-                return dataReader;
+                    //return list to be displayed
+                    return dataReader;
+                }
+                  
             }
             else
             {
-                return null;
+                throw new Exception("Falha ao abrir a conexao com o banco de dados");
             }
         }
 
@@ -177,6 +174,12 @@ namespace ConsoleApplication8.infra_ado
             {
                 return Count;
             }
+        }
+
+        public void dispose()
+        {
+            //close Connection
+            this.CloseConnection();
         }
         
     }
