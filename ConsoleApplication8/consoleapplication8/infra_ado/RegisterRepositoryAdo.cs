@@ -110,79 +110,85 @@ namespace ConsoleApplication8.infra_ado
 
             string query = " SELECT * FROM registers ";
 
+            List<Register> registros = new List<Register>();
+
             using (MySqlDataReader reader = _conexao.Select(query))
             {
 
                 while (reader.Read())
                 {
                     
-                    Console.WriteLine("{0}", reader["ccontrato"]);
+                   // Console.WriteLine("{0}", reader["ccontrato"]);
 
-                    /*reader["vencimento"];
-                    reader["ccontrato"];
-                    reader["ccredor"];
-                    reader["ccpfcnpj"];
-                    reader["cendereco"];
-                    reader["cbairro"];
-                    reader["ccidade"];
-                    reader["cestado"];
-                    reader["ccep"];
-                    reader["cinscricaoestadual"];
-                    reader["codigocredor"];
-                    reader["contrato"];
-                    reader["codigotitulo"];
-                    reader["vencimentoprorrogavel"];
-                    reader["dataemissao"];
-                    reader["parcela"];
-                    reader["plano"];
-                    reader["valortitulo"];
-                    reader["nossonumero"];
-                    reader["numdocumento"];
-                    reader["especiedoc"];
-                    reader["especmoeda"];
-                    reader["carteira"];
-                    reader["cpfcnpj"];
-                    reader["nomesacado"];
-                    reader["endereco"];
-                    reader["enderecocomplemento"];
-                    reader["bairro"];
-                    reader["cep"];
-                    reader["cidade"];
-                    reader["uf"];
-                    reader["cedente"];
-                    reader["banco"];
-                    reader["agencia"];
-                    reader["conta"];
-                    reader["nomecredor"];
-                    reader["nomecedente"];
-                    reader["localpagamento"];
-                    reader["mensagem1"];
-                    reader["mensagem2"];
-                    reader["mensagem3"];
-                    reader["mensagem4"];
-                    reader["mensagem5"];
-                    reader["linhadigitavel"];
-                    reader["codigobarras"];
-                    reader["codigoretorno"];
-                    reader["valoratual"];
-                    reader["desconto"];
-                    reader["codigopessoa"];
-                    reader["prorrogavel"];
-                    reader["codecentralizador"];
-                    reader["numerocentralizador"];
-                    reader["ctcamarrado"];
-                    reader["ctcfaixacep"];
-                    reader["facdatapostagem"];
-                    reader["kbsfaccontrato"];
-                    reader["kbsfaccif"];
-                    reader["mensagem6"];
-                    reader["idcarta"];*/
+                    Register reg = new Register();
+                   // reg.vencimento = new DateTime(long.Parse(reader["vencimento"].ToString()));
+                    reg.ccontrato = Int32.Parse(reader["ccontrato"].ToString());
+                    reg.ccredor = reader["ccredor"].ToString();
+                    reg.ccpfcnpj = long.Parse(reader["ccpfcnpj"].ToString());
+                    reg.cendereco = reader["cendereco"].ToString();
+                    reg.cbairro = reader["cbairro"].ToString();
+                    reg.ccidade = reader["ccidade"].ToString();
+                    reg.cestado = reader["cestado"].ToString();
+                    reg.ccep = Int32.Parse(reader["ccep"].ToString());
+                    reg.cinscricaoestadual = reader["cinscricaoestadual"].ToString();
+                    reg.codigocredor = Int32.Parse(reader["codigocredor"].ToString());
+                    reg.contrato = long.Parse(reader["contrato"].ToString());
+                    reg.codigotitulo = long.Parse(reader["codigotitulo"].ToString());
+                    //reg.vencimentoprorrogavel = reader["vencimentoprorrogavel"].ToString();
+                    //reg.dataemissao = reader["dataemissao"].ToString();
+                    reg.parcela = Int32.Parse(reader["parcela"].ToString());
+                    reg.plano = reader["plano"].ToString();
+                   // reg.valortitulo = reader["valortitulo"].ToString();
+                    reg.nossonumero = long.Parse(reader["nossonumero"].ToString());
+                    reg.numdocumento = long.Parse(reader["numdocumento"].ToString());
+                    reg.especiedoc = reader["especiedoc"].ToString();
+                    reg.especmoeda = reader["especmoeda"].ToString();
+                    reg.carteira = reader["carteira"].ToString();
+                    reg.cpfcnpj = long.Parse(reader["cpfcnpj"].ToString());
+                    reg.nomesacado = reader["nomesacado"].ToString();
+                    reg.endereco = reader["endereco"].ToString();
+                    reg.enderecocomplemento = reader["enderecocomplemento"].ToString();
+                    reg.bairro = reader["bairro"].ToString();
+                    reg.cep = Int32.Parse(reader["cep"].ToString());
+                    reg.cidade = reader["cidade"].ToString();
+                    reg.uf = reader["uf"].ToString();
+                    reg.cedente = reader["cedente"].ToString();
+                    reg.banco = reader["banco"].ToString();
+                    reg.agencia = Int32.Parse(reader["agencia"].ToString());
+                    reg.conta = Int32.Parse(reader["conta"].ToString());
+                    reg.nomecredor = reader["nomecredor"].ToString();
+                    reg.nomecedente = reader["nomecedente"].ToString();
+                    reg.localpagamento = reader["localpagamento"].ToString();
+                    reg.mensagem1 = reader["mensagem1"].ToString();
+                    reg.mensagem2 = reader["mensagem2"].ToString();
+                    reg.mensagem3 = reader["mensagem3"].ToString();
+                    reg.mensagem4 = reader["mensagem4"].ToString();
+                    reg.mensagem5 = reader["mensagem5"].ToString();
+                    reg.linhadigitavel = reader["linhadigitavel"].ToString();
+                    reg.codigobarras = reader["codigobarras"].ToString();
+                    reg.codigoretorno = long.Parse(reader["codigoretorno"].ToString());
+                   // reg.valoratual = reader["valoratual"].ToString();
+                    reg.desconto = Int32.Parse(reader["desconto"].ToString());
+                    reg.codigopessoa = Int32.Parse(reader["codigopessoa"].ToString());
+                    reg.prorrogavel = reader["prorrogavel"].ToString();
+                    reg.codecentralizador = reader["codecentralizador"].ToString();
+                    reg.numerocentralizador = Int32.Parse(reader["numerocentralizador"].ToString());
+                    reg.ctcamarrado = reader["ctcamarrado"].ToString();
+                    reg.ctcfaixacep = reader["ctcfaixacep"].ToString();
+                   // reg.facdatapostagem = reader["facdatapostagem"].ToString();
+                    reg.kbsfaccontrato = reader["kbsfaccontrato"].ToString();
+                    reg.kbsfaccif = reader["kbsfaccif"].ToString();
+                    reg.mensagem6 = reader["mensagem6"].ToString();
+                    reg.idcarta = reader["idcarta"].ToString();
+
+
+                    registros.Add(reg);
                 }
 
 
                 reader.Close();
 
-                return null;
+                return registros;
             }
 
               
