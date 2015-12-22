@@ -62,10 +62,7 @@
     <Compile Include="Domain\Register.cs" />
     <Compile Include="infra\DataContexts\MySqlConfiguration.cs" />
     <Compile Include="infra\DataContexts\MySqlHistoryContext.cs" />
-    <Compile Include="Domain\Category.cs" />
-    <Compile Include="Domain\Product.cs" />
     <Compile Include="infra\DataContexts\MyDataContext.cs" />
-    <Compile Include="infra\Mappings\ProductMap.cs" />
     <Compile Include="infra\Mappings\RegisterMap.cs" />
     <Compile Include="infra\Repository\Interfaces\IRegisterRepository.cs" />
     <Compile Include="infra\Repository\RegisterRepository.cs" />

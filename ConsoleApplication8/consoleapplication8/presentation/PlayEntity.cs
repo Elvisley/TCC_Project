@@ -53,7 +53,7 @@ namespace ConsoleApplication8.presentation
                        string[] dados = line.Split(';');
                        System.Console.WriteLine(dados[0]);
                        Register reg = new Register();
-                       reg.vencimento = reg.formatarData(dados[0]);
+                       reg.vencimento = dados[0].ToString();
                        reg.ccontrato = int.Parse(dados[1]);
                        reg.ccredor = dados[2];
                        reg.ccpfcnpj = Int64.Parse(reg.retirarCaracteresEspeciais(dados[3]));
@@ -66,8 +66,8 @@ namespace ConsoleApplication8.presentation
                        reg.codigocredor = Int32.Parse(dados[10]);
                        reg.contrato = Int64.Parse(dados[11]);
                        reg.codigotitulo = Int64.Parse(dados[12]);
-                       reg.vencimentoprorrogavel = reg.formatarData(dados[13]);
-                       reg.dataemissao = reg.formatarDataPipi(dados[14]);
+                       reg.vencimentoprorrogavel = dados[13].ToString();
+                       reg.dataemissao = dados[14].ToString();
                        reg.parcela = Int32.Parse(dados[15]);
                        reg.plano = dados[16];
                        reg.valortitulo = reg.formatarValor(dados[17]);
@@ -107,7 +107,7 @@ namespace ConsoleApplication8.presentation
                        reg.numerocentralizador = Int32.Parse(dados[51]);
                        reg.ctcamarrado = dados[52];
                        reg.ctcfaixacep = dados[53];
-                       reg.facdatapostagem = reg.formatarDataPipi(dados[54]);
+                       reg.facdatapostagem = dados[54].ToString();
                        reg.kbsfaccontrato = dados[55];
                        reg.kbsfaccif = dados[56];
                        reg.mensagem6 = dados[57];

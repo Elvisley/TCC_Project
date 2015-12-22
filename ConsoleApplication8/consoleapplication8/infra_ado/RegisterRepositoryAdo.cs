@@ -118,10 +118,8 @@ namespace ConsoleApplication8.infra_ado
                 while (reader.Read())
                 {
                     
-                   // Console.WriteLine("{0}", reader["ccontrato"]);
-
                     Register reg = new Register();
-                   // reg.vencimento = new DateTime(long.Parse(reader["vencimento"].ToString()));
+                    reg.vencimento = reader["vencimento"].ToString();
                     reg.ccontrato = Int32.Parse(reader["ccontrato"].ToString());
                     reg.ccredor = reader["ccredor"].ToString();
                     reg.ccpfcnpj = long.Parse(reader["ccpfcnpj"].ToString());
@@ -134,11 +132,11 @@ namespace ConsoleApplication8.infra_ado
                     reg.codigocredor = Int32.Parse(reader["codigocredor"].ToString());
                     reg.contrato = long.Parse(reader["contrato"].ToString());
                     reg.codigotitulo = long.Parse(reader["codigotitulo"].ToString());
-                    //reg.vencimentoprorrogavel = reader["vencimentoprorrogavel"].ToString();
-                    //reg.dataemissao = reader["dataemissao"].ToString();
+                    reg.vencimentoprorrogavel = reader["vencimentoprorrogavel"].ToString();
+                    reg.dataemissao = reader["dataemissao"].ToString();
                     reg.parcela = Int32.Parse(reader["parcela"].ToString());
                     reg.plano = reader["plano"].ToString();
-                   // reg.valortitulo = reader["valortitulo"].ToString();
+                    reg.valortitulo = Decimal.Parse(reader["valortitulo"].ToString());
                     reg.nossonumero = long.Parse(reader["nossonumero"].ToString());
                     reg.numdocumento = long.Parse(reader["numdocumento"].ToString());
                     reg.especiedoc = reader["especiedoc"].ToString();
@@ -167,7 +165,7 @@ namespace ConsoleApplication8.infra_ado
                     reg.linhadigitavel = reader["linhadigitavel"].ToString();
                     reg.codigobarras = reader["codigobarras"].ToString();
                     reg.codigoretorno = long.Parse(reader["codigoretorno"].ToString());
-                   // reg.valoratual = reader["valoratual"].ToString();
+                    reg.valoratual = Decimal.Parse(reader["valoratual"].ToString());
                     reg.desconto = Int32.Parse(reader["desconto"].ToString());
                     reg.codigopessoa = Int32.Parse(reader["codigopessoa"].ToString());
                     reg.prorrogavel = reader["prorrogavel"].ToString();
@@ -175,7 +173,7 @@ namespace ConsoleApplication8.infra_ado
                     reg.numerocentralizador = Int32.Parse(reader["numerocentralizador"].ToString());
                     reg.ctcamarrado = reader["ctcamarrado"].ToString();
                     reg.ctcfaixacep = reader["ctcfaixacep"].ToString();
-                   // reg.facdatapostagem = reader["facdatapostagem"].ToString();
+                    reg.facdatapostagem = reader["facdatapostagem"].ToString();
                     reg.kbsfaccontrato = reader["kbsfaccontrato"].ToString();
                     reg.kbsfaccif = reader["kbsfaccif"].ToString();
                     reg.mensagem6 = reader["mensagem6"].ToString();

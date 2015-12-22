@@ -13,7 +13,7 @@ namespace ConsoleApplication8.Domain
     {
         public int id { get; set; }
 
-        public DateTime vencimento { get; set; }
+        public string vencimento { get; set; }
 
         public int ccontrato { get; set; }
 
@@ -39,9 +39,9 @@ namespace ConsoleApplication8.Domain
 
         public Int64 codigotitulo { get; set; }
 
-        public DateTime vencimentoprorrogavel { get; set; }
+        public string vencimentoprorrogavel { get; set; }
 
-        public DateTime dataemissao { get; set; }
+        public string dataemissao { get; set; }
 
         public int parcela { get; set; }
 
@@ -121,7 +121,7 @@ namespace ConsoleApplication8.Domain
 
         public string ctcfaixacep { get; set; }
 
-        public DateTime facdatapostagem { get; set; }
+        public string facdatapostagem { get; set; }
 
         public string kbsfaccontrato { get; set; }
 
