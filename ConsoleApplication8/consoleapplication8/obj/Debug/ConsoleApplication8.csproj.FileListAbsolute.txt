@@ -46,3 +46,4 @@ C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\ConsoleApplic
 C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\ConsoleApplication8\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\ConsoleApplication8\obj\Debug\ConsoleApplication8.exe
 C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\ConsoleApplication8\obj\Debug\ConsoleApplication8.pdb
+C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\ConsoleApplication8\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll

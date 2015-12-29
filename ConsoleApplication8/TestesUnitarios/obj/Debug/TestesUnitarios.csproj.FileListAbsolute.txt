@@ -1,0 +1,13 @@
+C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\TestesUnitarios\bin\Debug\TestesUnitarios.dll
+C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\TestesUnitarios\bin\Debug\TestesUnitarios.pdb
+C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\TestesUnitarios\bin\Debug\ConsoleApplication8.exe
+C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\TestesUnitarios\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\TestesUnitarios\bin\Debug\EntityFramework.dll
+C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\TestesUnitarios\bin\Debug\MySql.Data.dll
+C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\TestesUnitarios\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\TestesUnitarios\bin\Debug\ConsoleApplication8.pdb
+C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\TestesUnitarios\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\TestesUnitarios\bin\Debug\EntityFramework.xml
+C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\TestesUnitarios\obj\Debug\TestesUnitarios.csprojResolveAssemblyReference.cache
+C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\TestesUnitarios\obj\Debug\TestesUnitarios.dll
+C:\Users\Elvisley\Documents\GitHub\TCC_Project\ConsoleApplication8\TestesUnitarios\obj\Debug\TestesUnitarios.pdb
